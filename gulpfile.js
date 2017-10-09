@@ -2,7 +2,7 @@ var fs = require('fs');
 var path = require('path');
 
 var gulp = require('gulp');
-var plugins = require('gulp-load-plugins')(); // Load all gulp plugins
+var $ = require('gulp-load-plugins')(); // Load all gulp plugins
                                               // automatically and attach
                                               // them to the `plugins` object
 
@@ -71,16 +71,30 @@ gulp.task('copy', [
 
 gulp.task('copy:.htaccess', function () {
     return gulp.src('node_modules/apache-server-configs/dist/.htaccess')
-               .pipe(plugins.replace(/# ErrorDocument/g, 'ErrorDocument'))
+               .pipe($.replace(/# ErrorDocument/g, 'ErrorDocument'))
                .pipe(gulp.dest(dirs.dist));
 });
 
-gulp.task('server', function () {
+gulp.task('css', function () {
+    return gulp.src('src/sass/**/*.scss')
+        .pipe($.sourcemaps.init())
+        .pipe($.sass().on('error', $.sass.logError))
+        .pipe($.sourcemaps.write('.'))
+        .pipe(gulp.dest('src/css'))
+})
+
+gulp.task('sync-css', ['css'], function () {
+    return gulp.src('src/css')
+        .pipe(browserSync.stream())
+})
+
+gulp.task('serve', ['css'], function () {
     browserSync.init({
         server: {
             baseDir: "./src"
         }
     });
+    gulp.watch('src/sass/**/*.scss', ['sync-css'])
 });
 
 

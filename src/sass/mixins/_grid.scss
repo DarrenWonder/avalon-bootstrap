@@ -1,0 +1,38 @@
+@mixin make-grid {
+    @for $i from 1 through $grid-columns {
+        .col-#{$i} {
+            width: percentage(($i / $grid-columns));
+        }
+
+        .col-push-#{$i} {
+            left: percentage(($i / $grid-columns));
+        }
+
+        .col-pull-#{$i} {
+            right: percentage(($i / $grid-columns));
+        }
+
+        .col-offset-#{$i} {
+            margin-left: percentage(($i / $grid-columns));
+        }
+    }
+    $list: ".col-1";
+    @for $i from 2 through $grid-columns {
+        $list: "#{$list}, .col-#{$i}";
+    }
+    #{$list} {
+        position: relative;
+        min-height: 1px;
+        float: left;
+
+        padding-left:  ceil(($grid-gutter-width / 2));
+        padding-right: floor(($grid-gutter-width / 2));
+    }
+    .col-push-0 {
+        left: auto;
+    }
+
+    .col-pull-0 {
+        right: auto;
+    }
+}

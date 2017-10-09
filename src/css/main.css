@@ -3,16 +3,13 @@
  * Credit left inline and big thanks to Nicolas Gallagher, Jonathan Neal,
  * Kroc Camen, and the H5BP dev community and team.
  */
-
 /* ==========================================================================
    Base styles: opinionated defaults
    ========================================================================== */
-
 html {
-    color: #222;
-    font-size: 1em;
-    line-height: 1.4;
-}
+  color: #333;
+  font-size: 1em;
+  line-height: 1.4; }
 
 /*
  * Remove text-shadow in selection highlight:
@@ -21,147 +18,108 @@ html {
  * These selection rule sets have to be separate.
  * Customize the background color to match your design.
  */
-
 ::-moz-selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+  background: #b3d4fc;
+  text-shadow: none; }
 
 ::selection {
-    background: #b3d4fc;
-    text-shadow: none;
-}
+  background: #b3d4fc;
+  text-shadow: none; }
 
 /*
  * A better looking default horizontal rule
  */
-
 hr {
-    display: block;
-    height: 1px;
-    border: 0;
-    border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
-}
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
+  padding: 0; }
 
 /*
  * Remove the gap between audio, canvas, iframes,
  * images, videos and the bottom of their containers:
  * https://github.com/h5bp/html5-boilerplate/issues/440
  */
-
 audio,
 canvas,
 iframe,
 img,
 svg,
 video {
-    vertical-align: middle;
-}
+  vertical-align: middle; }
 
 /*
  * Remove default fieldset styles.
  */
-
 fieldset {
-    border: 0;
-    margin: 0;
-    padding: 0;
-}
+  border: 0;
+  margin: 0;
+  padding: 0; }
 
 /*
  * Allow only vertical resizing of textareas.
  */
-
 textarea {
-    resize: vertical;
-}
+  resize: vertical; }
 
 /* ==========================================================================
    Browser Upgrade Prompt
    ========================================================================== */
-
 .browserupgrade {
-    margin: 0.2em 0;
-    background: #ccc;
-    color: #000;
-    padding: 0.2em 0;
-}
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0; }
 
 /* ==========================================================================
    Author's custom styles
    ========================================================================== */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* ==========================================================================
    Helper classes
    ========================================================================== */
-
 /*
  * Hide visually and from screen readers:
  * http://juicystudio.com/article/screen-readers-display-none.php
  */
-
 .hidden {
-    display: none !important;
-    visibility: hidden;
-}
+  display: none !important;
+  visibility: hidden; }
 
 /*
  * Hide only visually, but have it available for screen readers:
  * http://snook.ca/archives/html_and_css/hiding-content-for-accessibility
  */
-
 .visuallyhidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
-    position: absolute;
-    width: 1px;
-}
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px; }
 
 /*
  * Extends the .visuallyhidden class to allow the element
  * to be focusable when navigated to via the keyboard:
  * https://www.drupal.org/node/897638
  */
-
 .visuallyhidden.focusable:active,
 .visuallyhidden.focusable:focus {
-    clip: auto;
-    height: auto;
-    margin: 0;
-    overflow: visible;
-    position: static;
-    width: auto;
-}
+  clip: auto;
+  height: auto;
+  margin: 0;
+  overflow: visible;
+  position: static;
+  width: auto; }
 
 /*
  * Hide visually and from screen readers, but maintain layout
  */
-
 .invisible {
-    visibility: hidden;
-}
+  visibility: hidden; }
 
 /*
  * Clearfix: contain floats
@@ -174,242 +132,735 @@ textarea {
  * 2. The use of `table` rather than `block` is only necessary if using
  *    `:before` to contain the top-margins of child elements.
  */
-
 .clearfix:before,
 .clearfix:after {
-    content: " "; /* 1 */
-    display: table; /* 2 */
-}
+  content: " ";
+  /* 1 */
+  display: table;
+  /* 2 */ }
 
 .clearfix:after {
-    clear: both;
-}
+  clear: both; }
 
 /* ==========================================================================
    EXAMPLE Media Queries for Responsive Design.
    These examples override the primary ('mobile first') styles.
    Modify as content requires.
    ========================================================================== */
-
 @media only screen and (min-width: 35em) {
-    /* Style adjustments for viewports that meet the condition */
-}
+  /* Style adjustments for viewports that meet the condition */ }
 
-@media print,
-       (-o-min-device-pixel-ratio: 5/4),
-       (-webkit-min-device-pixel-ratio: 1.25),
-       (min-resolution: 120dpi) {
-    /* Style adjustments for high resolution devices */
-}
+@media print, (-o-min-device-pixel-ratio: 5 / 4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+  /* Style adjustments for high resolution devices */ }
 
 /* ==========================================================================
    Print styles.
    Inlined to avoid the additional HTTP request:
    http://www.phpied.com/delay-loading-your-print-css/
    ========================================================================== */
-
 @media print {
-    *,
-    *:before,
-    *:after {
-        background: transparent !important;
-        color: #000 !important; /* Black prints faster:
+  *,
+  *:before,
+  *:after {
+    background: transparent !important;
+    color: #000 !important;
+    /* Black prints faster:
                                    http://www.sanbeiji.com/archives/953 */
-        box-shadow: none !important;
-        text-shadow: none !important;
-    }
-
-    a,
-    a:visited {
-        text-decoration: underline;
-    }
-
-    a[href]:after {
-        content: " (" attr(href) ")";
-    }
-
-    abbr[title]:after {
-        content: " (" attr(title) ")";
-    }
-
-    /*
+    box-shadow: none !important;
+    text-shadow: none !important; }
+  a,
+  a:visited {
+    text-decoration: underline; }
+  a[href]:after {
+    content: " (" attr(href) ")"; }
+  abbr[title]:after {
+    content: " (" attr(title) ")"; }
+  /*
      * Don't show links that are fragment identifiers,
      * or use the `javascript:` pseudo protocol
      */
-
-    a[href^="#"]:after,
-    a[href^="javascript:"]:after {
-        content: "";
-    }
-
-    pre,
-    blockquote {
-        border: 1px solid #999;
-        page-break-inside: avoid;
-    }
-
-    /*
+  a[href^="#"]:after,
+  a[href^="javascript:"]:after {
+    content: ""; }
+  pre,
+  blockquote {
+    border: 1px solid #999;
+    page-break-inside: avoid; }
+  /*
      * Printing Tables:
      * http://css-discuss.incutio.com/wiki/Printing_Tables
      */
+  thead {
+    display: table-header-group; }
+  tr,
+  img {
+    page-break-inside: avoid; }
+  img {
+    max-width: 100% !important; }
+  p,
+  h2,
+  h3 {
+    orphans: 3;
+    widows: 3; }
+  h2,
+  h3 {
+    page-break-after: avoid; } }
 
-    thead {
-        display: table-header-group;
-    }
+/*! normalize.css v7.0.0 | MIT License | github.com/necolas/normalize.css */
+/* Document
+   ========================================================================== */
+/**
+ * 1. Correct the line height in all browsers.
+ * 2. Prevent adjustments of font size after orientation changes in
+ *    IE on Windows Phone and in iOS.
+ */
+html {
+  line-height: 1.15;
+  /* 1 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */ }
 
-    tr,
-    img {
-        page-break-inside: avoid;
-    }
-
-    img {
-        max-width: 100% !important;
-    }
-
-    p,
-    h2,
-    h3 {
-        orphans: 3;
-        widows: 3;
-    }
-
-    h2,
-    h3 {
-        page-break-after: avoid;
-    }
-}
-
-/* GLOBAL STYLES
--------------------------------------------------- */
-/* Padding below the footer and lighter body text */
-
+/* Sections
+   ========================================================================== */
+/**
+ * Remove the margin in all browsers (opinionated).
+ */
 body {
-    padding-bottom: 40px;
-    color: #5a5a5a;
-}
+  margin: 0; }
 
+/**
+ * Add the correct display in IE 9-.
+ */
+article,
+aside,
+footer,
+header,
+nav,
+section {
+  display: block; }
 
-/* CUSTOMIZE THE NAVBAR
--------------------------------------------------- */
+/**
+ * Correct the font size and margin on `h1` elements within `section` and
+ * `article` contexts in Chrome, Firefox, and Safari.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
 
-/* Special class on .container surrounding .navbar, used for positioning it into place. */
-.navbar-wrapper {
-    position: absolute;
-    top: 0;
-    right: 0;
-    left: 0;
-    z-index: 20;
-}
+/* Grouping content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in IE.
+ */
+figcaption,
+figure,
+main {
+  /* 1 */
+  display: block; }
 
-/* Flip around the padding for proper display in narrow viewports */
-.navbar-wrapper > .container {
-    padding-right: 0;
-    padding-left: 0;
-}
-.navbar-wrapper .navbar {
-    padding-right: 15px;
-    padding-left: 15px;
-}
-.navbar-wrapper .navbar .container {
-    width: auto;
-}
+/**
+ * Add the correct margin in IE 8.
+ */
+figure {
+  margin: 1em 40px; }
 
+/**
+ * 1. Add the correct box sizing in Firefox.
+ * 2. Show the overflow in Edge and IE.
+ */
+hr {
+  box-sizing: content-box;
+  /* 1 */
+  height: 0;
+  /* 1 */
+  overflow: visible;
+  /* 2 */ }
 
-/* CUSTOMIZE THE CAROUSEL
--------------------------------------------------- */
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+pre {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
-/* Carousel base class */
-.carousel {
-    height: 500px;
-    margin-bottom: 60px;
-}
-/* Since positioning the image, we need to help out the caption */
-.carousel-caption {
-    z-index: 10;
-}
+/* Text-level semantics
+   ========================================================================== */
+/**
+ * 1. Remove the gray background on active links in IE 10.
+ * 2. Remove gaps in links underline in iOS 8+ and Safari 8+.
+ */
+a {
+  background-color: transparent;
+  /* 1 */
+  -webkit-text-decoration-skip: objects;
+  /* 2 */ }
 
-/* Declare heights because of positioning of img element */
-.carousel .item {
-    height: 500px;
-    background-color: #777;
-}
-.carousel-inner > .item > img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    min-width: 100%;
-    height: 500px;
-}
+/**
+ * 1. Remove the bottom border in Chrome 57- and Firefox 39-.
+ * 2. Add the correct text decoration in Chrome, Edge, IE, Opera, and Safari.
+ */
+abbr[title] {
+  border-bottom: none;
+  /* 1 */
+  text-decoration: underline;
+  /* 2 */
+  text-decoration: underline dotted;
+  /* 2 */ }
 
+/**
+ * Prevent the duplicate application of `bolder` by the next rule in Safari 6.
+ */
+b,
+strong {
+  font-weight: inherit; }
 
-/* MARKETING CONTENT
--------------------------------------------------- */
+/**
+ * Add the correct font weight in Chrome, Edge, and Safari.
+ */
+b,
+strong {
+  font-weight: bolder; }
 
-/* Center align the text within the three columns below the carousel */
-.marketing .col-lg-4 {
-    margin-bottom: 20px;
-    text-align: center;
-}
-.marketing h2 {
-    font-weight: normal;
-}
-.marketing .col-lg-4 p {
-    margin-right: 10px;
-    margin-left: 10px;
-}
+/**
+ * 1. Correct the inheritance and scaling of font size in all browsers.
+ * 2. Correct the odd `em` font sizing in all browsers.
+ */
+code,
+kbd,
+samp {
+  font-family: monospace, monospace;
+  /* 1 */
+  font-size: 1em;
+  /* 2 */ }
 
+/**
+ * Add the correct font style in Android 4.3-.
+ */
+dfn {
+  font-style: italic; }
 
-/* Featurettes
-------------------------- */
+/**
+ * Add the correct background and color in IE 9-.
+ */
+mark {
+  background-color: #ff0;
+  color: #000; }
 
-.featurette-divider {
-    margin: 80px 0; /* Space out the Bootstrap <hr> more */
-}
+/**
+ * Add the correct font size in all browsers.
+ */
+small {
+  font-size: 80%; }
 
-/* Thin out the marketing headings */
-.featurette-heading {
-    font-weight: 300;
-    line-height: 1;
-    letter-spacing: -1px;
-}
+/**
+ * Prevent `sub` and `sup` elements from affecting the line height in
+ * all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
 
+sub {
+  bottom: -0.25em; }
 
-/* RESPONSIVE CSS
--------------------------------------------------- */
+sup {
+  top: -0.5em; }
 
-@media (min-width: 768px) {
-    /* Navbar positioning foo */
-    .navbar-wrapper {
-        margin-top: 20px;
-    }
-    .navbar-wrapper .container {
-        padding-right: 15px;
-        padding-left: 15px;
-    }
-    .navbar-wrapper .navbar {
-        padding-right: 0;
-        padding-left: 0;
-    }
+/* Embedded content
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+audio,
+video {
+  display: inline-block; }
 
-    /* The navbar becomes detached from the top, so we round the corners */
-    .navbar-wrapper .navbar {
-        border-radius: 4px;
-    }
+/**
+ * Add the correct display in iOS 4-7.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
 
-    /* Bump up size of carousel content */
-    .carousel-caption p {
-        margin-bottom: 20px;
-        font-size: 21px;
-        line-height: 1.4;
-    }
+/**
+ * Remove the border on images inside links in IE 10-.
+ */
+img {
+  border-style: none; }
 
-    .featurette-heading {
-        font-size: 50px;
-    }
-}
+/**
+ * Hide the overflow in IE.
+ */
+svg:not(:root) {
+  overflow: hidden; }
 
-@media (min-width: 992px) {
-    .featurette-heading {
-        margin-top: 120px;
-    }
-}
+/* Forms
+   ========================================================================== */
+/**
+ * 1. Change the font styles in all browsers (opinionated).
+ * 2. Remove the margin in Firefox and Safari.
+ */
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: sans-serif;
+  /* 1 */
+  font-size: 100%;
+  /* 1 */
+  line-height: 1.15;
+  /* 1 */
+  margin: 0;
+  /* 2 */ }
+
+/**
+ * Show the overflow in IE.
+ * 1. Show the overflow in Edge.
+ */
+button,
+input {
+  /* 1 */
+  overflow: visible; }
+
+/**
+ * Remove the inheritance of text transform in Edge, Firefox, and IE.
+ * 1. Remove the inheritance of text transform in Firefox.
+ */
+button,
+select {
+  /* 1 */
+  text-transform: none; }
+
+/**
+ * 1. Prevent a WebKit bug where (2) destroys native `audio` and `video`
+ *    controls in Android 4.
+ * 2. Correct the inability to style clickable types in iOS and Safari.
+ */
+button,
+html [type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */ }
+
+/**
+ * Remove the inner border and padding in Firefox.
+ */
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  border-style: none;
+  padding: 0; }
+
+/**
+ * Restore the focus styles unset by the previous rule.
+ */
+button:-moz-focusring,
+[type="button"]:-moz-focusring,
+[type="reset"]:-moz-focusring,
+[type="submit"]:-moz-focusring {
+  outline: 1px dotted ButtonText; }
+
+/**
+ * Correct the padding in Firefox.
+ */
+fieldset {
+  padding: 0.35em 0.75em 0.625em; }
+
+/**
+ * 1. Correct the text wrapping in Edge and IE.
+ * 2. Correct the color inheritance from `fieldset` elements in IE.
+ * 3. Remove the padding so developers are not caught out when they zero out
+ *    `fieldset` elements in all browsers.
+ */
+legend {
+  box-sizing: border-box;
+  /* 1 */
+  color: inherit;
+  /* 2 */
+  display: table;
+  /* 1 */
+  max-width: 100%;
+  /* 1 */
+  padding: 0;
+  /* 3 */
+  white-space: normal;
+  /* 1 */ }
+
+/**
+ * 1. Add the correct display in IE 9-.
+ * 2. Add the correct vertical alignment in Chrome, Firefox, and Opera.
+ */
+progress {
+  display: inline-block;
+  /* 1 */
+  vertical-align: baseline;
+  /* 2 */ }
+
+/**
+ * Remove the default vertical scrollbar in IE.
+ */
+textarea {
+  overflow: auto; }
+
+/**
+ * 1. Add the correct box sizing in IE 10-.
+ * 2. Remove the padding in IE 10-.
+ */
+[type="checkbox"],
+[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */ }
+
+/**
+ * Correct the cursor style of increment and decrement buttons in Chrome.
+ */
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto; }
+
+/**
+ * 1. Correct the odd appearance in Chrome and Safari.
+ * 2. Correct the outline style in Safari.
+ */
+[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  outline-offset: -2px;
+  /* 2 */ }
+
+/**
+ * Remove the inner padding and cancel buttons in Chrome and Safari on macOS.
+ */
+[type="search"]::-webkit-search-cancel-button,
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/**
+ * 1. Correct the inability to style clickable types in iOS and Safari.
+ * 2. Change font properties to `inherit` in Safari.
+ */
+::-webkit-file-upload-button {
+  -webkit-appearance: button;
+  /* 1 */
+  font: inherit;
+  /* 2 */ }
+
+/* Interactive
+   ========================================================================== */
+/*
+ * Add the correct display in IE 9-.
+ * 1. Add the correct display in Edge, IE, and Firefox.
+ */
+details,
+menu {
+  display: block; }
+
+/*
+ * Add the correct display in all browsers.
+ */
+summary {
+  display: list-item; }
+
+/* Scripting
+   ========================================================================== */
+/**
+ * Add the correct display in IE 9-.
+ */
+canvas {
+  display: inline-block; }
+
+/**
+ * Add the correct display in IE.
+ */
+template {
+  display: none; }
+
+/* Hidden
+   ========================================================================== */
+/**
+ * Add the correct display in IE 10-.
+ */
+[hidden] {
+  display: none; }
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+  width: 1200px; }
+
+.col-1 {
+  width: 8.33333%; }
+
+.col-push-1 {
+  left: 8.33333%; }
+
+.col-pull-1 {
+  right: 8.33333%; }
+
+.col-offset-1 {
+  margin-left: 8.33333%; }
+
+.col-2 {
+  width: 16.66667%; }
+
+.col-push-2 {
+  left: 16.66667%; }
+
+.col-pull-2 {
+  right: 16.66667%; }
+
+.col-offset-2 {
+  margin-left: 16.66667%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-push-3 {
+  left: 25%; }
+
+.col-pull-3 {
+  right: 25%; }
+
+.col-offset-3 {
+  margin-left: 25%; }
+
+.col-4 {
+  width: 33.33333%; }
+
+.col-push-4 {
+  left: 33.33333%; }
+
+.col-pull-4 {
+  right: 33.33333%; }
+
+.col-offset-4 {
+  margin-left: 33.33333%; }
+
+.col-5 {
+  width: 41.66667%; }
+
+.col-push-5 {
+  left: 41.66667%; }
+
+.col-pull-5 {
+  right: 41.66667%; }
+
+.col-offset-5 {
+  margin-left: 41.66667%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-push-6 {
+  left: 50%; }
+
+.col-pull-6 {
+  right: 50%; }
+
+.col-offset-6 {
+  margin-left: 50%; }
+
+.col-7 {
+  width: 58.33333%; }
+
+.col-push-7 {
+  left: 58.33333%; }
+
+.col-pull-7 {
+  right: 58.33333%; }
+
+.col-offset-7 {
+  margin-left: 58.33333%; }
+
+.col-8 {
+  width: 66.66667%; }
+
+.col-push-8 {
+  left: 66.66667%; }
+
+.col-pull-8 {
+  right: 66.66667%; }
+
+.col-offset-8 {
+  margin-left: 66.66667%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-push-9 {
+  left: 75%; }
+
+.col-pull-9 {
+  right: 75%; }
+
+.col-offset-9 {
+  margin-left: 75%; }
+
+.col-10 {
+  width: 83.33333%; }
+
+.col-push-10 {
+  left: 83.33333%; }
+
+.col-pull-10 {
+  right: 83.33333%; }
+
+.col-offset-10 {
+  margin-left: 83.33333%; }
+
+.col-11 {
+  width: 91.66667%; }
+
+.col-push-11 {
+  left: 91.66667%; }
+
+.col-pull-11 {
+  right: 91.66667%; }
+
+.col-offset-11 {
+  margin-left: 91.66667%; }
+
+.col-12 {
+  width: 100%; }
+
+.col-push-12 {
+  left: 100%; }
+
+.col-pull-12 {
+  right: 100%; }
+
+.col-offset-12 {
+  margin-left: 100%; }
+
+.col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+  position: relative;
+  min-height: 1px;
+  float: left;
+  padding-left: 15px;
+  padding-right: 15px; }
+
+.col-push-0 {
+  left: auto; }
+
+.col-pull-0 {
+  right: auto; }
+
+.btn {
+  display: inline-block;
+  margin-bottom: 0;
+  font-size: 18px;
+  font-weight: 400;
+  text-align: center;
+  vertical-align: middle;
+  touch-action: manipulation;
+  cursor: pointer;
+  background-image: none;
+  border: 1px solid transparent;
+  white-space: nowrap; }
+
+.btn-default {
+  border-color: #b3b3b3; }
+
+.btn-primary {
+  color: #dc3941;
+  background-color: #fff;
+  border-color: #f3474b; }
+  .btn-primary:focus, .btn-primary.focus {
+    color: #dc3941;
+    background-color: #e6e6e6;
+    border-color: #af0b0f; }
+  .btn-primary:hover {
+    color: #dc3941;
+    background-color: #e6e6e6;
+    border-color: #ed0f15; }
+  .btn-primary:active, .btn-primary.active,
+  .open > .btn-primary.dropdown-toggle {
+    color: #dc3941;
+    background-color: #e6e6e6;
+    border-color: #ed0f15; }
+    .btn-primary:active:hover, .btn-primary:active:focus, .btn-primary:active.focus, .btn-primary.active:hover, .btn-primary.active:focus, .btn-primary.active.focus,
+    .open > .btn-primary.dropdown-toggle:hover,
+    .open > .btn-primary.dropdown-toggle:focus,
+    .open > .btn-primary.dropdown-toggle.focus {
+      color: #dc3941;
+      background-color: #d4d4d4;
+      border-color: #af0b0f; }
+  .btn-primary:active, .btn-primary.active,
+  .open > .btn-primary.dropdown-toggle {
+    background-image: none; }
+  .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary.disabled.focus, .btn-primary[disabled]:hover, .btn-primary[disabled]:focus, .btn-primary[disabled].focus,
+  fieldset[disabled] .btn-primary:hover,
+  fieldset[disabled] .btn-primary:focus,
+  fieldset[disabled] .btn-primary.focus {
+    background-color: #fff;
+    border-color: #f3474b; }
+
+.btn-reverse {
+  color: #fff;
+  background-color: #f23d46;
+  border-color: #dc3841; }
+  .btn-reverse:focus, .btn-reverse.focus {
+    color: #fff;
+    background-color: #ec101b;
+    border-color: #7e161c; }
+  .btn-reverse:hover {
+    color: #fff;
+    background-color: #ec101b;
+    border-color: #b72028; }
+  .btn-reverse:active, .btn-reverse.active,
+  .open > .btn-reverse.dropdown-toggle {
+    color: #fff;
+    background-color: #ec101b;
+    border-color: #b72028; }
+    .btn-reverse:active:hover, .btn-reverse:active:focus, .btn-reverse:active.focus, .btn-reverse.active:hover, .btn-reverse.active:focus, .btn-reverse.active.focus,
+    .open > .btn-reverse.dropdown-toggle:hover,
+    .open > .btn-reverse.dropdown-toggle:focus,
+    .open > .btn-reverse.dropdown-toggle.focus {
+      color: #fff;
+      background-color: #cb0e17;
+      border-color: #7e161c; }
+  .btn-reverse:active, .btn-reverse.active,
+  .open > .btn-reverse.dropdown-toggle {
+    background-image: none; }
+  .btn-reverse.disabled:hover, .btn-reverse.disabled:focus, .btn-reverse.disabled.focus, .btn-reverse[disabled]:hover, .btn-reverse[disabled]:focus, .btn-reverse[disabled].focus,
+  fieldset[disabled] .btn-reverse:hover,
+  fieldset[disabled] .btn-reverse:focus,
+  fieldset[disabled] .btn-reverse.focus {
+    background-color: #f23d46;
+    border-color: #dc3841; }
+
+.btn-lg {
+  width: 500px;
+  font-size: 18px;
+  line-height: 80px;
+  border-radius: 0; }
+
+.btn-md {
+  width: 260px;
+  font-size: 18px;
+  line-height: 60px;
+  border-radius: 0; }
+
+.btn-sm {
+  width: 126px;
+  font-size: 18px;
+  line-height: 47px;
+  border-radius: 4px; }
+
+/*# sourceMappingURL=main.css.map */

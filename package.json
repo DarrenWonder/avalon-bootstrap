@@ -45,6 +45,7 @@
   "name": "html5-boilerplate",
   "private": true,
   "scripts": {
+    "dev": "gulp serve",
     "build": "gulp build",
     "test": "gulp archive && mocha --reporter spec --timeout 5000"
   },
