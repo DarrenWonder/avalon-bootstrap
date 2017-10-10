@@ -13,11 +13,24 @@
 }
 
 .btn-default {
-    @include button-variant($btn-default-color, $btn-default-bg,  $btn-default-border)
+    border-color: #b3b3b3;
 }
 .btn-primary {
     @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
 }
 .btn-reverse {
     @include button-variant($btn-reverse-color, $btn-reverse-bg, $btn-reverse-border);
+}
+
+
+.btn-lg {
+    @include button-size($btn-lg-width, $btn-lg-font, $btn-lg-height, $btn-lg-border-radius)
+}
+
+.btn-md {
+    @include button-size($btn-md-width, $btn-md-font, $btn-md-height, $btn-md-border-radius)
+}
+
+.btn-sm {
+    @include button-size($btn-sm-width, $btn-sm-font, $btn-sm-height, $btn-sm-border-radius)
 }
