@@ -4,15 +4,20 @@ require.config({
         bootstrap: 'https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min',
         avalon: 'vendor/avalon',
         modernizr: 'https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min',
-        domReady: 'https://cdn.bootcss.com/require-domReady/2.0.1/domReady.min'
+        domReady: 'https://cdn.bootcss.com/require-domReady/2.0.1/domReady.min',
+        flexSlider: 'https://cdn.staticfile.org/flexslider/2.6.3/jquery.flexslider.min'
     },
     shim: {
         'bootstrap': {
             deps: ['jquery']
+        },
+        'flexSlider': {
+            deps: ['jquery'],
+            exports: 'jQuery.fn.flexslider'
         }
     }
 });
-require(['avalon',"domReady!", "bootstrap",  "modernizr"], function(avalon) {
+require(['avalon', 'jquery', 'flexSlider', "domReady!", "bootstrap",  "modernizr"], function(avalon, $) {
     var vm = avalon.define({
         $id: "list",
         infoList: [
@@ -31,6 +36,23 @@ require(['avalon',"domReady!", "bootstrap",  "modernizr"], function(avalon) {
         ]
     });
     avalon.scan(document.body);
+
+    $('.flexslider.main').flexslider({
+        animation: "slide",
+
+        easing: "swing",
+        direction: "horizontal",
+
+        slideshowSpeed: 5000,
+        directionNav: false
+
+    });
+
+    $('.flexslider.about').flexslider({
+        animation: "fade",
+        controlNav: false
+    });
+
     var method;
     var noop = function () {};
     var methods = [

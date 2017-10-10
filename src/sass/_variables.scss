@@ -1,6 +1,25 @@
-$btn-font-weight: 400;
-$btn-font-size: 18px;
-=======
+// stage
+$font-family-base: tahoma,arial,"pingfang sc",'Hiragino Sans GB','\5b8b\4f53',sans-serif;
+$body-bg: #fff;
+$font-size-base: 14px;
+
+// type
+$headings-font-weight:    400 !default;
+$headings-line-height:    1 !default;
+$headings-color:          inherit !default;
+
+$secondary-color: #999 !default;
+$secondary-size: 26px !default;
+$secondary-line-height:    1 !default;
+
+$font-size-h1:            floor(($font-size-base * 2.6)) !default; // ~36px
+$font-size-h2:            floor(($font-size-base * 2.15)) !default; // ~30px
+$font-size-h3:            ceil(($font-size-base * 1.7)) !default; // ~24px
+$font-size-h4:            ceil(($font-size-base * 1.25)) !default; // ~18px
+$font-size-h5:            $font-size-base !default;
+$font-size-h6:            ceil(($font-size-base * 0.85)) !default; // ~12px
+
+
 // grid
 $container-width: 1200px;
 $grid-columns: 12;
@@ -32,3 +51,8 @@ $btn-sm-width: 126px;
 $btn-sm-font: 18px;
 $btn-sm-height: 47px;
 $btn-sm-border-radius: 4px;
+
+// nav
+$nav-link-padding: 19px;
+$navbar-text-active-color: #f23d46;
+$navbar-link-active-color: #f3474b;

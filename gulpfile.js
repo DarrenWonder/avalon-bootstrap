@@ -95,6 +95,7 @@ gulp.task('serve', ['css'], function () {
         }
     });
     gulp.watch('src/sass/**/*.scss', ['sync-css'])
+    gulp.watch('*.html', browserSync.reload)
 });
 
 
