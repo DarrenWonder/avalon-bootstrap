@@ -50,7 +50,9 @@ require(['avalon', 'jquery', 'flexSlider', "domReady!", "bootstrap",  "modernizr
 
     $('.flexslider.about').flexslider({
         animation: "fade",
-        controlNav: false
+        controlNav: false,
+        prevText: '',
+        nextText: ''
     });
 
     var method;

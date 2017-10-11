@@ -94,8 +94,8 @@ gulp.task('serve', ['css'], function () {
             baseDir: "./src"
         }
     });
-    gulp.watch('src/sass/**/*.scss', ['sync-css'])
-    gulp.watch('*.html', browserSync.reload)
+    gulp.watch('src/sass/**/*.scss', ['sync-css']);
+    gulp.watch('src/*.html', browserSync.reload);
 });
 
 
