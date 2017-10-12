@@ -92,7 +92,8 @@ gulp.task('serve', ['css'], function () {
     browserSync.init({
         server: {
             baseDir: "./src"
-        }
+        },
+        scrollRestoreTechnique: 'cookie'
     });
     gulp.watch('src/sass/**/*.scss', ['sync-css']);
     gulp.watch('src/*.html', browserSync.reload);

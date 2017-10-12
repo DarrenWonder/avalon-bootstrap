@@ -1,0 +1,65 @@
+.card {
+    background-color: #fff;
+
+    img {
+        width: 100%;
+        @include img-responsive;
+    }
+
+    .card-hd {
+        position: relative;
+
+        > .card-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(211, 33, 42, .7);
+            opacity: 0;
+            transform: scale(.8);
+            transition: opacity .2s ease, transform .5s ease;
+
+            > .overlay-label {
+                margin: 103px auto 0;
+                padding: 10px 0;
+                width: 81px;
+                border-top: 1px solid #fff;
+                border-bottom: 1px solid #fff;
+                color: #fff;
+                font-size: 18px;
+                font-weight: 100;
+                text-align: center;
+            }
+        }
+
+        &:hover {
+            > .card-overlay {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+    }
+
+    .card-bd {
+        padding: 17px 20px 32px;
+
+        .card-bd__desc {
+            margin: 14px 0 0;
+            color: #666;
+            font-size: 12px;
+        }
+    }
+
+    .card-ft {
+        margin: 0 20px;
+        padding: 13px 0;
+        border-top: 1px solid #e6e6e6;
+
+        .card-ft__price {
+            color: $primary-color;
+            font-size: 16px;
+            letter-spacing: 1.6px;
+        }
+    }
+}

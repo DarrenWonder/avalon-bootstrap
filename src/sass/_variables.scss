@@ -1,3 +1,9 @@
+// color
+$primary-color: #f23d46;
+$primary-color-light: #f3474b;
+$primary-color-lighter: #f84948;
+$primary-color-dark: #dc3941;
+
 // stage
 $font-family-base: tahoma,arial,"pingfang sc",'Hiragino Sans GB','\5b8b\4f53',sans-serif;
 $body-bg: #fff;
@@ -29,13 +35,13 @@ $grid-gutter-width: 30px;
 $btn-font-weight: 400;
 $btn-font-size: 18px;
 
-$btn-primary-color: #dc3941;
+$btn-primary-color: $primary-color-dark !default;
 $btn-primary-bg: #fff;
-$btn-primary-border: #f3474b;
+$btn-primary-border: $primary-color-light !default;
 
 $btn-reverse-color: #fff;
-$btn-reverse-bg: #f23d46;
-$btn-reverse-border: #dc3841;
+$btn-reverse-bg: $primary-color !default;
+$btn-reverse-border: $primary-color-dark !default;
 
 $btn-lg-width: 500px;
 $btn-lg-font: 18px;
@@ -54,5 +60,7 @@ $btn-sm-border-radius: 4px;
 
 // nav
 $nav-link-padding: 19px;
-$navbar-text-active-color: #f23d46;
-$navbar-link-active-color: #f3474b;
+$navbar-text-active-color: $primary-color !default;
+$navbar-link-active-color: $primary-color-light !default;
+$navbar-background-color: $primary-color !default;
+$dropdown-background-color: $primary-color-lighter !default;

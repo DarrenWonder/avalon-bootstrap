@@ -61,6 +61,10 @@
             color: $navbar-text-active-color;
             border-bottom: 4px solid $navbar-link-active-color;
         }
+
+        .open > a {
+            color: $navbar-text-active-color;
+        }
     }
 
     &:before {
@@ -71,7 +75,7 @@
         display: block;
         width: 60px;
         height: 60px;
-        background-color: #f23d46;
+        background-color: $navbar-background-color;
         z-index: -1;
     }
 }
@@ -110,7 +114,7 @@
 
         & > a:hover {
             color: #fff;
-            background-color: #f23d46;
+            background-color: $navbar-background-color;
         }
     }
 
@@ -121,10 +125,43 @@
 
 // Hide tabbable panes to start, show them when `.active`
 .tab-content {
+    margin: 90px -15px 0;
+
     > .tab-pane {
         display: none;
     }
     > .active {
+        display: block;
+    }
+}
+
+.dropdown-menu {
+    position: absolute;
+    top: 80px;
+    display: none;
+    padding: 0;
+    width: 100%;
+    background-color: #fff;
+    list-style: none;
+    text-align: center;
+    z-index: 500;
+
+    > li > a {
+        display: block;
+        padding: 8px 0;
+        white-space: nowrap;
+    }
+
+    > li {
+        &.active > a,
+        > a:hover,
+        > a:focus {
+          color: #fff;
+            background-color: $dropdown-background-color;
+        }
+    }
+
+    .open > & {
         display: block;
     }
 }
