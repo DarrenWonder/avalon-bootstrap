@@ -14,6 +14,7 @@
 
 .btn-default {
     border-color: #b3b3b3;
+    background-color: #fff;
 }
 .btn-primary {
     @include button-variant($btn-primary-color, $btn-primary-bg, $btn-primary-border);
