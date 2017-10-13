@@ -1342,4 +1342,13 @@ p {
     border-bottom: 764px solid #f23d46;
     border-left: 735px solid transparent; }
 
+.sales {
+  z-index: 100; }
+  .sales .logo {
+    padding: 80px 67px;
+    text-align: center;
+    transition: box-shadow .3s ease-in-out; }
+    .sales .logo:hover {
+      box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2); }
+
 /*# sourceMappingURL=main.css.map */
