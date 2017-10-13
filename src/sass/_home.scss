@@ -348,6 +348,7 @@
             height: 0;
             border-bottom: 764px solid $primary-color;
             border-left: 735px solid transparent;
+            touch-action: none;
         }
     }
 }

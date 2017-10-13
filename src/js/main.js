@@ -55,23 +55,73 @@ require(['avalon', 'jquery', 'flexSlider', "domReady!", "bootstrap",  "modernizr
         nextText: ''
     });
 
-    var method;
-    var noop = function () {};
-    var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
+    function init() {
+        var overlay = $( '.md-overlay' );
+        $('.md-trigger').each(function () {
+            var modal = $('#' + $(this).data('modal')),
+                close = $('.md-close', modal),
+                self = this;
+            function removeModal( hasPerspective ) {
+                // classie.remove( modal[0], 'md-show' );
 
-    while (length--) {
-        method = methods[length];
+                modal.removeClass('md-show')
+                $(document.documentElement).css('overflow', '')
 
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noop;
+                if ( hasPerspective ) {
+                    // classie.remove( document.documentElement, 'md-perspective' );
+                    $(document.documentElement).removeClass('md-perspective')
+                }
+            }
+
+            function removeModalHandler() {
+                removeModal( $(self).hasClass( 'md-setperspective' ) );
+            }
+
+            $(this).on('click.modal', function () {
+                // classie.add( modal[0], 'md-show' );
+                modal.addClass('md-show')
+                $(document.documentElement).css('overflow', 'hidden')
+                overlay.off( 'click', removeModalHandler );
+                overlay.on( 'click', removeModalHandler );
+
+                if( $(self).hasClass( 'md-setperspective' ) ) {
+                    setTimeout( function() {
+                        // classie.add( document.documentElement, 'md-perspective' );
+                        $(document.documentElement).addClass('md-perspective')
+                    }, 25 );
+                }
+            })
+
+            close.on('click.modal', function (ev) {
+                ev.stopPropagation();
+                removeModalHandler();
+            })
+        })
+    }
+
+    init();
+    fixIeConsole();
+
+    function fixIeConsole () {
+        var method;
+        var noop = function () {};
+        var methods = [
+            'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
+            'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
+            'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
+            'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
+        ];
+        var length = methods.length;
+        var console = (window.console = window.console || {});
+
+        while (length--) {
+            method = methods[length];
+
+            // Only stub undefined methods.
+            if (!console[method]) {
+                console[method] = noop;
+            }
         }
     }
+
 });
