@@ -5,7 +5,8 @@ require.config({
         avalon: 'vendor/avalon',
         modernizr: 'https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min',
         domReady: 'https://cdn.bootcss.com/require-domReady/2.0.1/domReady.min',
-        flexSlider: 'https://cdn.staticfile.org/flexslider/2.6.3/jquery.flexslider.min'
+        flexSlider: 'https://cdn.staticfile.org/flexslider/2.6.3/jquery.flexslider.min',
+        product: 'product'
     },
     shim: {
         'bootstrap': {
@@ -14,6 +15,10 @@ require.config({
         'flexSlider': {
             deps: ['jquery'],
             exports: 'jQuery.fn.flexslider'
+        },
+        'product': {
+            deps: ['jquery'],
+            exports: '$'
         }
     }
 });
