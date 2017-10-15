@@ -34,17 +34,6 @@
     .open > &.dropdown-toggle {
         background-image: none;
     }
-    &.disabled,
-    &[disabled],
-    fieldset[disabled] & {
-        &:hover,
-        &:focus,
-        &.focus {
-            background-color: $background;
-            border-color: $border;
-        }
-    }
-
 }
 
 @mixin button-size($width, $font-size, $line-height, $border-radius) {

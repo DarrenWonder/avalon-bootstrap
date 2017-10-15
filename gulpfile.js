@@ -15,6 +15,7 @@ var browserSync = require('browser-sync').create();
 // | postcss plugin                                                    |
 // ---------------------------------------------------------------------
 var autoprefixer = require('autoprefixer')
+var cssnano = require('cssnano')
 
 
 
@@ -97,7 +98,8 @@ gulp.task('css', function () {
                 'android >= 4.4',
                 'bb >= 10'
             ]
-        })
+        }),
+        cssnano()
     ]
 
     return gulp.src('src/sass/**/*.scss')

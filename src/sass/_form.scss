@@ -23,8 +23,10 @@ legend {
 label {
     display: inline-block;
     max-width: 100%; // Force IE8 to wrap long content (see https://github.com/twbs/bootstrap/issues/13141)
-    margin-bottom: 5px;
-    font-weight: bold;
+    margin-bottom: 6.5px;
+    font-size: 14px;
+    font-weight: normal;
+    color: #4d4d4d;
 }
 
 
@@ -111,3 +113,98 @@ output {
     }
 }
 
+.form-primary {
+    width: 400px;
+
+    .form-group {
+        position: relative;
+    }
+
+    .form-control {
+        padding: 9.5px 0;
+        font-size: 18px;
+        color: $primary-color;
+        border: 0;
+        border-bottom: 1px solid #e6e6e6;
+
+        &:focus {
+            box-shadow: none;
+        }
+
+        &::placeholder {
+            font-size: 12px;
+        }
+    }
+
+    .control-right {
+        position: absolute;
+        top: 0;
+        right: 0;
+
+        .captcha-btn {
+            margin-right: 10px;
+            color: #ccc;
+            vertical-align: middle;
+        }
+
+        .captcha {
+            display: inline-block;
+            vertical-align: middle;
+            width: 80px;
+            height: 32px;
+
+            > img {
+                @include img-responsive;
+            }
+        }
+
+        .btn {
+            padding: 8px 12px;
+            font-size: 14px;
+        }
+    }
+
+    .form-action {
+        margin-top: 4px;
+
+        .btn {
+            margin-bottom: 10px;
+            width: 100%;
+            color: #fff;
+        }
+    }
+}
+
+.help-block {
+    margin: 3.5px 0;
+    font-size: 12px;
+    color: #656565;
+    text-align: center;
+}
+
+.checkbox-group {
+    font-size: 12px;
+
+    > span {
+        vertical-align: middle;
+    }
+
+}
+
+.checkbox {
+    display: none;
+
+    & + span{
+        margin-right: 10px;
+        font-size: 20px;
+        color: #f34850;
+
+        &:before {
+            content: '\e671'; // '\e63c'
+        }
+    }
+
+    &:checked + span:before {
+        content: '\e63c';
+    }
+}
