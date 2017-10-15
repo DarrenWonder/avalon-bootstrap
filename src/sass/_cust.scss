@@ -1,180 +1,177 @@
-.cust-home {
+ .cust-home_head {
     width: 100%;
-    .cust-home_head {
-        width: 100%;
-        height: 610px;
-        background-repeat: no-repeat;
-        background-size: cover;
-        background-position: center center;
-    }
-    .cust-home_advantage {
-        .advantage-info {
-            @include clearfix();
-            width: 1000px;
-            margin: -105px auto 0 auto;
-            position: relative;
-            z-index: 2;
-            box-shadow: 0px 0px 25px rgba(0, 0, 0, .2);
-            background: white;
-            .col-4 {
-                padding: 0;
+    height: 610px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+.cust-home_advantage {
+    .advantage-info {
+        @include clearfix();
+        width: 1000px;
+        margin: -105px auto 0 auto;
+        position: relative;
+        z-index: 2;
+        box-shadow: 0px 0px 25px rgba(0, 0, 0, .2);
+        background: white;
+        .col-4 {
+            padding: 0;
+        }
+        .advantage-info_list{
+            padding-bottom: 70px;
+            .iconfont {
+                width: 90px;
+                height: 90px;
+                background: #d9242d;
+                margin: -45px auto 0 auto;
+                transform:rotate(45deg);
+                text-align: center;
+                line-height: 81px;
+                &:before {
+                    display: inline-block;
+                    font-size: 40px;
+                    color: #fff;
+                    transform:rotate(-45deg);
+                }
             }
-            .advantage-info_list{
-                padding-bottom: 70px;
-                .iconfont {
-                    width: 90px;
-                    height: 90px;
-                    background: #d9242d;
-                    margin: -45px auto 0 auto;
-                    transform:rotate(45deg);
-                    text-align: center;
-                    line-height: 81px;
-                    &:before {
-                        display: inline-block;
-                        font-size: 40px;
-                        color: #fff;
-                        transform:rotate(-45deg);
-                    }
+            .text{
+                text-align: center;
+                font-family: "Microsoft YaHei";
+                margin-top: 20px;
+                padding: 65px 25px 50px 25px;
+                border-right: 1px solid #e6e6e6;
+                .title {
+                    color: #333333;
+                    font-size: 20px;
+                    margin-bottom: 38px;
                 }
-                .text{
-                    text-align: center;
-                    font-family: "Microsoft YaHei";
-                    margin-top: 20px;
-                    padding: 65px 25px 50px 25px;
-                    border-right: 1px solid #e6e6e6;
-                    .title {
-                        color: #333333;
-                        font-size: 20px;
-                        margin-bottom: 38px;
-                    }
-                    .introduce {
-                        font-size: 12px;
-                        color: #808080;
-                        line-height: 24px;
-                    }
+                .introduce {
+                    font-size: 12px;
+                    color: #808080;
+                    line-height: 24px;
                 }
-                &:last-child {
-                    .text {
-                        border: 0;
-                    }
+            }
+            &:last-child {
+                .text {
+                    border: 0;
                 }
             }
         }
     }
-    .cust-case_wrap{
-        .cust-home_case {
-            padding-bottom: 0;
-            .case-cont {
-                background-color: #f4f7fa;
-                padding: 80px 0;
-                .case_list {
-                    .case_list-describe{
-                        @include clearfix();
-                        border: 1px solid #808080;
-                        padding: 50px 50px 50px 35px;
-                        background: #fff;
+}
+.cust-case_wrap{
+    .cust-home_case {
+        padding-bottom: 0;
+        .case-cont {
+            background-color: #f4f7fa;
+            padding: 80px 0;
+            .case_list {
+                .case_list-describe{
+                    @include clearfix();
+                    border: 1px solid #808080;
+                    padding: 50px 50px 50px 35px;
+                    background: #fff;
+                    position: relative;
+                    z-index: 2;
+                    .sign {
+                        background: #f23d46;
+                        color: #fff;
+                        float: right;
+                        text-align: center;
+                        border-radius: 4px;
+                    }
+                    .title {
+                        font-size: 24px;
+                        font-weight: 400;
+                        font-family: "Microsoft YaHei";
+                        letter-spacing: 4px;
                         position: relative;
-                        z-index: 2;
-                        .sign {
-                            background: #f23d46;
-                            color: #fff;
-                            float: right;
-                            text-align: center;
-                            border-radius: 4px;
+                        line-height: 36px;
+                        &:before{
+                            position: absolute;
+                            bottom: -35px;
+                            left: 0px;
+                            content: '';
+                            display: block;
+                            width: 60px;
+                            height: 2px;
+                            background-color: #f23d46;
                         }
-                        .title {
-                            font-size: 24px;
-                            font-weight: 400;
-                            font-family: "Microsoft YaHei";
-                            letter-spacing: 4px;
-                            position: relative;
-                            line-height: 36px;
-                            &:before{
-                                position: absolute;
-                                bottom: -35px;
-                                left: 0px;
-                                content: '';
-                                display: block;
-                                width: 60px;
-                                height: 2px;
-                                background-color: #f23d46;
-                            }
-                        }
-                        .case-info{
-                            font-size: 14px;
-                            color: #4c4c4c;
-                            line-height: 32px;
-                            margin-top: 60px;
-                            letter-spacing: 2.4px;
-                            .case-bmsay{
-                                margin-top: 40px;
-                                letter-spacing: normal;
-                            }
+                    }
+                    .case-info{
+                        font-size: 14px;
+                        color: #4c4c4c;
+                        line-height: 32px;
+                        margin-top: 60px;
+                        letter-spacing: 2.4px;
+                        .case-bmsay{
+                            margin-top: 40px;
+                            letter-spacing: normal;
                         }
                     }
                 }
-                .max-case_list{
-                    width: 1200px;
-                    margin-bottom: 80px;
+            }
+            .max-case_list{
+                width: 1200px;
+                margin-bottom: 80px;
+                img{
+                    width: 100%;
+                    height: auto;
+                }
+                .max-case_list-describe {
+                    width: 750px;
+                    margin-top: -230px;
+                    .max-sign {
+                        width: 110px;
+                        height: 60px;
+
+                        font-size: 17px;
+                        margin-top: -70px;
+                        line-height: 60px;
+                        margin-bottom: 10px;
+                    }
+                }
+            }
+            .min-case-wrap {
+                @include clearfix();
+                .min-case_list{
+                    width: 570px;
+                    display: inline-block;
                     img{
                         width: 100%;
                         height: auto;
                     }
-                    .max-case_list-describe {
-                        width: 750px;
-                        margin-top: -230px;
-                        .max-sign {
-                            width: 110px;
-                            height: 60px;
-
-                            font-size: 17px;
-                            margin-top: -70px;
-                            line-height: 60px;
-                            margin-bottom: 10px;
+                    .min-case_list-describe {
+                        width: 520px;
+                        margin-top: -60px;
+                        .min-sign {
+                            width: 90px;
+                            height: 50px;
+                            font-size: 14px;
+                            margin-top: -75px;
+                            line-height: 50px;
+                            margin-bottom: 18px;
                         }
                     }
-                }
-                .min-case-wrap {
-                    @include clearfix();
-                    .min-case_list{
-                        width: 570px;
-                        display: inline-block;
-                        img{
-                            width: 100%;
-                            height: auto;
-                        }
-                        .min-case_list-describe {
-                            width: 520px;
-                            margin-top: -60px;
-                            .min-sign {
-                                width: 90px;
-                                height: 50px;
-                                font-size: 14px;
-                                margin-top: -75px;
-                                line-height: 50px;
-                                margin-bottom: 18px;
-                            }
-                        }
-                        &:nth-of-type(2n) {
-                            float: right;
-                            padding-top: 80px;
-                        }
+                    &:nth-of-type(2n) {
+                        float: right;
+                        padding-top: 80px;
                     }
                 }
             }
         }
     }
-    .cust-sales{
-        position: relative;
-        z-index: 100;
-        .logo {
-            padding: 80px 67px;
-            text-align: center;
-            transition: border .3s ease-in-out;
-            border: 2px solid #fff;
-            &:hover {
-                border: 2px solid #f23d46;
-            }
+}
+.cust-sales{
+    position: relative;
+    z-index: 100;
+    .logo {
+        padding: 80px 67px;
+        text-align: center;
+        transition: border .3s ease-in-out;
+        border: 2px solid #fff;
+        &:hover {
+            border: 2px solid #f23d46;
         }
     }
 }

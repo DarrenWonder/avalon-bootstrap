@@ -51,6 +51,7 @@
 .category {
     padding-top: 65px;
     padding-bottom: 160px;
+    background-color: #fff;
 
     &.bg-gray {
         background-color: #f4f7fa;
@@ -285,7 +286,6 @@
 
     .footer-bg-top {
         height: 324px;
-        background-color: #f6f6f6;
     }
 
     .footer-bg-bottom {
@@ -367,13 +367,12 @@
         p {
             margin: 0;
             line-height: 34px;
+            color: #ccc;
         }
     }
 }
 
 .sales {
-    position: relative;
-    z-index: 3;
     .logo {
         padding: 80px 67px;
         text-align: center;
@@ -382,5 +381,19 @@
         &:hover {
             box-shadow: 0px 0px 25px rgba(0, 0, 0, .2);
         }
+    }
+}
+
+#consult .md-content > div {
+    padding: 0 90px 60px;
+}
+
+#tel .md-content {
+    padding-top: 70px;
+    padding-bottom: 82.5px;
+
+    .md-desc {
+        margin: 7.5px 0;
+        font-size: 24px;
     }
 }

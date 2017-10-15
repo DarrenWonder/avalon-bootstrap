@@ -1,0 +1,35 @@
+.post-container {
+    padding-top: 165px;
+
+    .category {
+        background-color: transparent;
+    }
+
+    .post {
+        margin: 0 100px;
+        padding: 0 150px 80px 155px;
+        border: 1px solid #808080;
+        background-color: #fff;
+
+        > h4 {
+            margin-top: 80px;
+            color: $primary-color;
+        }
+    }
+}
+
+
+.resource-container {
+    @extend .post-container;
+
+    .post {
+        margin: 0;
+        padding: 40px 12px;
+
+        @include clearfix;
+    }
+
+    .category {
+        padding-bottom: 15px;
+    }
+}

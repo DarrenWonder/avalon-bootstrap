@@ -1,0 +1,38 @@
+table {
+    background-color: #fff;
+}
+thead {
+    background-color: #f5f5f5;
+}
+caption {
+    text-align: left;
+}
+th {
+    text-align: left;
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+    border: 1px solid #808080;
+    border-spacing: 0;
+    margin-bottom: 65px;
+
+    > thead,
+    > tbody,
+    > tfoot {
+        > tr {
+            > th,
+            > td {
+                padding: 20px 80px;
+                vertical-align: top;
+            }
+        }
+    }
+
+    > thead > tr > th {
+        font-size: 18px;
+    }
+
+
+}

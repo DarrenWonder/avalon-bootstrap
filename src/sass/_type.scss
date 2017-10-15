@@ -22,8 +22,9 @@ h5, .h5 { font-size: $font-size-h5; }
 h6, .h6 { font-size: $font-size-h6; }
 
 p {
-    margin-top: 20px;
-    margin-bottom: 19px;
-    line-height: 1.9;
+    margin-top: 6px;
+    margin-bottom: 6px;
+    line-height: (30px / 14px);
     letter-spacing: 1.4px;
+    color: #4d4d4d;
 }

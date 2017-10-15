@@ -10,6 +10,14 @@ var runSequence = require('run-sequence');    // Temporary solution until gulp 4
                                               // https://github.com/gulpjs/gulp/issues/355
 var browserSync = require('browser-sync').create();
 
+
+// ---------------------------------------------------------------------
+// | postcss plugin                                                    |
+// ---------------------------------------------------------------------
+var autoprefixer = require('autoprefixer')
+
+
+
 // ---------------------------------------------------------------------
 // | Helper tasks                                                      |
 // ---------------------------------------------------------------------
@@ -76,9 +84,26 @@ gulp.task('copy:.htaccess', function () {
 });
 
 gulp.task('css', function () {
+    var plugins = [
+        autoprefixer({
+            browsers: [
+                'ie >= 8',
+                'ie_mob >= 10',
+                'ff >= 30',
+                'chrome >= 34',
+                'safari >= 7',
+                'opera >= 23',
+                'ios >= 7',
+                'android >= 4.4',
+                'bb >= 10'
+            ]
+        })
+    ]
+
     return gulp.src('src/sass/**/*.scss')
         .pipe($.sourcemaps.init())
         .pipe($.sass().on('error', $.sass.logError))
+        .pipe($.postcss(plugins))
         .pipe($.sourcemaps.write('.'))
         .pipe(gulp.dest('src/css'))
 })

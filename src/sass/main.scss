@@ -1,9 +1,12 @@
+// core variables
 @import "variables";
 
+// core mixins
 @import "mixins/button";
 @import "mixins/grid";
 @import "mixins/utilties";
 
+// components
 @import "cross-browser";
 @import "normalize";
 @import "grid";
@@ -12,7 +15,12 @@
 @import "stage";
 @import "type";
 @import "card";
-@import "home";
 @import "modal";
-@import "cust";
+@import "form";
+@import "post";
+@import "table";
+
+// pages
+@import "home";
 @import "product";
+@import "cust";

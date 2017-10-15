@@ -19,6 +19,7 @@
     max-width: 630px;
     min-width: 320px;
     height: auto;
+    background: #fff;
     z-index: 2000;
     visibility: hidden;
     -webkit-backface-visibility: hidden;
@@ -56,31 +57,33 @@
 
 /* Content styles */
 .md-content {
-    background: #fff;
     position: relative;
     margin: 0 auto;
+    padding-top: 39px;
 }
 
 .md-content h3 {
     margin: 0;
-    padding: 0.4em;
     text-align: center;
-    font-size: 2.4em;
-    font-weight: 300;
-    opacity: 0.8;
-    background: rgba(0,0,0,0.1);
-    border-radius: 3px 3px 0 0;
+    color: #4d4d4d;
+}
+
+.md-content .md-desc {
+    margin: 14px 0;
+    text-align: center;
+    color: $primary-color;
 }
 
 .close {
     float: right;
+    position: relative;
+    right: 19px;
+    top: 19px;
     font-size: 21px;
     font-weight: 700;
     line-height: 1;
-    color: #000;
-    text-shadow: 0 1px 0 #fff;
-    filter: alpha(opacity=20);
-    opacity: .2;
+    color: #939393;
+    z-index: 1;
 }
 
 button.close {
@@ -92,7 +95,7 @@ button.close {
 }
 
 .md-content > div {
-    padding: 15px 40px 30px;
+    padding: 23px 40px 30px;
     margin: 0;
     font-weight: 300;
     font-size: 1.15em;
