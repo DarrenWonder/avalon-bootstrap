@@ -265,10 +265,44 @@
 }
 
 .footer {
+    position: relative;
+
+    .footer-bg {
+        position: relative;
+
+        &:after {
+            position: absolute;
+            right: 0;
+            bottom: 0;
+            content: '';
+            width: 0;
+            height: 0;
+            border-bottom: 764px solid $primary-color;
+            border-left: 735px solid transparent;
+            touch-action: none;
+        }
+    }
+
+    .footer-bg-top {
+        height: 324px;
+        background-color: #f6f6f6;
+    }
+
+    .footer-bg-bottom {
+        height: 160px;
+        background-color: #333;
+    }
+
+    .footer-wrapper {
+        position: absolute;
+        top: 0;
+        width: 100%;
+    }
+
     .address {
+        position: relative;
         padding-top: 80px;
         padding-bottom: 24px;
-        background-color: #f6f6f6;
 
         ul {
             margin: 0;
@@ -283,9 +317,6 @@
         }
 
         .contact {
-            position: absolute;
-            right: 0;
-            z-index: 1;
 
             .btn {
                 margin-bottom: 19px;
@@ -331,30 +362,18 @@
     .copyright {
         position: relative;
         padding: 46px 0;
-        background-color: #333;
         color: #ccc;
 
         p {
             margin: 0;
             line-height: 34px;
         }
-
-        &:after {
-            position: absolute;
-            right: 0;
-            bottom: 0;
-            content: '';
-            width: 0;
-            height: 0;
-            border-bottom: 764px solid $primary-color;
-            border-left: 735px solid transparent;
-            touch-action: none;
-        }
     }
 }
 
 .sales {
-    z-index: 100;
+    position: relative;
+    z-index: 3;
     .logo {
         padding: 80px 67px;
         text-align: center;
