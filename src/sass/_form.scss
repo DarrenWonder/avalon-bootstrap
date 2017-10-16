@@ -180,6 +180,8 @@ output {
     font-size: 12px;
     color: #656565;
     text-align: center;
+
+    @include clearfix;
 }
 
 .checkbox-group {
@@ -207,4 +209,21 @@ output {
     &:checked + span:before {
         content: '\e63c';
     }
+}
+
+.sns-login-container {
+  margin-top: 25px;
+
+  .oth_type_tit {
+    padding-top: 7px;
+    border-top: 1px solid #e6e6e6;
+  }
+
+  .oth_type_txt {
+    margin: 0 auto;
+    width: 136px;
+    font-size: 12px;
+    text-align: center;
+    color: #b3b3b3;
+  }
 }

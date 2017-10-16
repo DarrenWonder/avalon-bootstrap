@@ -432,49 +432,51 @@
                 </div>
             </div>
         </div>
-        <div class="md-modal md-effect-1" id="login">
+        <div class="md-modal md-effect-1" id="login" ms-controller="loginCtrl">
             <button type="button" class="close"><span >&times</span></button>
+            <!--<div class="md-content" ms-html="@dom">-->
             <div class="md-content">
-                <h3>注册</h3>
-                <div class="form-primary">
-                    <div class="form-group">
-                        <label for="">手机号码</label>
-                        <input type="text" class="form-control" placeholder="请输入中国大陆的11位手机号">
-                    </div>
-                    <div class="form-group">
-                        <label for="">随机码</label>
-                        <input type="text" class="form-control" placeholder="请输入右侧的随机码">
-                        <div class="control-right">
-                            <span class="captcha-btn">换一张</span>
-                            <div class="captcha">
-                                <img src="http://dev.whaletrip.com/index.php?m=www&c=index&a=captcha" alt="">
-                            </div>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="">设置密码</label>
-                        <input type="text" class="form-control" placeholder="请输入右侧的随机码">
-                        <div class="control-right">
-                            <a href="" class="btn btn-reverse disabled" >点击获取</a>
-                        </div>
-                    </div>
-                    <div class="form-group">
-                        <label for="">确认密码</label>
-                        <input type="text" class="form-control" placeholder="请输入右侧的随机码">
-                    </div>
-                    <div class="form-group">
-                        <label class="checkbox-group">
-                            <input type="checkbox" class="checkbox">
-                            <span class="iconfont checkicon"></span>
-                            <span>斑马用户协议</span>
-                        </label>
-                    </div>
-                    <div class="form-action">
-                        <a href="" class="btn btn-reverse">确定</a>
-                        <p class="help-block">若未收到短信验证码，请<a>点击这里</a>接听语音验证</p>
-                        <p class="help-block"><a href="">已有用户登录</a></p>
-                    </div>
+              <h3>登录</h3>
+              <div class="form-primary">
+                <div class="form-group">
+                  <label for="">手机号码</label>
+                  <input type="text" class="form-control" placeholder="请输入中国大陆的11位手机号" ms-duplex="@phone">
                 </div>
+                <div class="form-group">
+                  <label for="">密码</label>
+                  <input type="text" class="form-control" placeholder="请输入密码，8-16位，以字母开头">
+                </div>
+                <div class="form-group">
+                  <label class="checkbox-group">
+                    <input type="checkbox" class="checkbox">
+                    <span class="iconfont checkicon"></span>
+                    <span>2个月内自动登录</span>
+                  </label>
+                </div>
+                <div class="form-action">
+                  <a href="" class="btn btn-reverse">确定</a>
+                  <p class="help-block"><a class="pull-left">忘记密码</a><a class="pull-right">使用短信验证码登录</a></p>
+                  <div style="display: block;" class="other_login_type sns-login-container">
+                    <fieldset class="oth_type_tit">
+                      <legend class="oth_type_txt">其他方式登录</legend>
+                    </fieldset>
+                    <div class="oth_type_links">
+                      <div class="col-6">
+                        <a href="">
+                          <span class="iconfont icon-weixin"></span>
+                          <span>微信登录</span>
+                        </a>
+                      </div>
+                      <div class="col-6">
+                        <a href="">
+                          <span class="iconfont icon-weixin"></span>
+                          <span>微信登录</span>
+                        </a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
         </div>
         <div class="md-overlay"></div><!-- the overlay element -->
