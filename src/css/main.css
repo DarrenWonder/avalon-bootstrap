@@ -924,6 +924,7 @@ fieldset[disabled] a.btn {
       position: relative;
       display: block;
       font-size: 18px;
+      color: #333;
       padding-top: 36px;
       padding-bottom: 20px;
       padding-left: 19px;
@@ -967,7 +968,6 @@ fieldset[disabled] a.btn {
       width: 180px;
       font-size: 24px;
       text-align: center;
-      color: #333;
       background-color: #fff; }
     .nav-tabs > li > a:hover, .nav-tabs > li.active > a, .nav-tabs > li.active > a:hover, .nav-tabs > li.active > a:focus {
       color: #fff;
@@ -2283,6 +2283,7 @@ th {
           line-height: 40px;
           color: #808080;
           cursor: pointer;
+          margin-right: 20px;
           transition: all .3s ease-in-out;
           border-radius: 2px; }
           .bm-product .product-filter_menu .menu-type .list li:hover {
