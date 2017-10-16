@@ -5,8 +5,7 @@ require.config({
         avalon: 'vendor/avalon',
         modernizr: 'https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min',
         domReady: 'https://cdn.bootcss.com/require-domReady/2.0.1/domReady.min',
-        flexSlider: 'https://cdn.staticfile.org/flexslider/2.6.3/jquery.flexslider.min',
-        product: 'product'
+        flexSlider: 'https://cdn.staticfile.org/flexslider/2.6.3/jquery.flexslider.min'
     },
     shim: {
         'bootstrap': {
@@ -15,73 +14,23 @@ require.config({
         'flexSlider': {
             deps: ['jquery'],
             exports: 'jQuery.fn.flexslider'
-        },
-        'product': {
-            deps: ['jquery'],
-            exports: '$'
         }
     }
 });
-require(['avalon', 'jquery', 'flexSlider', "domReady!", "bootstrap",  "modernizr", 'modal'], function(avalon, $) {
-    var vm = avalon.define({
-        $id: "list",
-        infoList: [
-            {
-                title: '第一个',
-                desc: '第一个很厉害的人'
-            },
-            {
-                title: '第二个',
-                desc: '第二个很厉害的人'
-            },
-            {
-                title: '第三个',
-                desc: '第三个很厉害的人'
-            }
-        ]
-    });
-    avalon.scan(document.body);
-
+require(['jquery', 'flexSlider', "bootstrap",  "modernizr", 'modal', "ie-fix", "domReady!"], function($) {
     $('.flexslider.main').flexslider({
         animation: "slide",
-
         easing: "swing",
         direction: "horizontal",
-
         slideshowSpeed: 5000,
         directionNav: false
-
     });
 
     $('.flexslider.about').flexslider({
         animation: "fade",
         controlNav: false,
         prevText: '',
-        nextText: ''
+        nextText: '',
+        pausePlay: true
     });
-
-    fixIeConsole();
-
-    function fixIeConsole () {
-        var method;
-        var noop = function () {};
-        var methods = [
-            'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-            'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-            'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-            'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
-        ];
-        var length = methods.length;
-        var console = (window.console = window.console || {});
-
-        while (length--) {
-            method = methods[length];
-
-            // Only stub undefined methods.
-            if (!console[method]) {
-                console[method] = noop;
-            }
-        }
-    }
-
 });

@@ -1,15 +1,12 @@
-require(["product"], function (){
-    var dest = [];
-    var type = [];
-    function screenCondition (className) {
-        $(className).click(function(){
-            if ($(this).index() > 0) {
-                $(className).eq(0).removeClass('active-btn');
-                $(this).toggleClass('active-btn');
-            } else if ($(this).index() == 0){
-                $(this).addClass('active-btn');
-                $(this).siblings().removeClass('active-btn');
-            }
-        })
+require.config({
+    paths: {
+        jquery: 'https://cdn.bootcss.com/jquery/1.9.1/jquery.min',
+        modernizr: 'https://cdn.bootcss.com/modernizr/2.8.3/modernizr.min',
+        domReady: 'https://cdn.bootcss.com/require-domReady/2.0.1/domReady.min'
+    },
+    shim: {
     }
+});
+require(['jquery', 'type-check', "domReady!", "modernizr"], function($, check) {
+    check('.dest-list>li');
 });
