@@ -226,4 +226,21 @@ output {
     text-align: center;
     color: #b3b3b3;
   }
+
+  .oth_type_link {
+    margin: 17px 45px 0 59px;
+    display: inline-block;
+    width: 54px;
+    font-size: 12px;
+    text-align: center;
+
+    .sns-logo {
+      line-height: inherit;
+    }
+
+    .sns-logo > span{
+      font-size: 26px;
+      color: #ccc;
+    }
+  }
 }

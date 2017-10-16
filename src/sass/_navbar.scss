@@ -121,6 +121,34 @@
 
 }
 
+.nav-compact {
+
+  > li {
+    margin: 0;
+
+    & > a {
+      padding: 37.5px 0;
+      width: 220px;
+      font-size: 22px;
+      text-align: center;
+      border-left: 1px solid #e6e6e6;
+    }
+
+    &.active > a {
+      &,
+      &:hover,
+      &:focus {
+        @extend a:hover;
+      }
+    }
+
+    & > a:hover {
+      color: #fff;
+      background-color: $navbar-background-color;
+    }
+  }
+}
+
 // Tabbable tabs
 // -------------------------
 
@@ -151,6 +179,7 @@
         display: block;
         padding: 8px 0;
         white-space: nowrap;
+        color: #333;
     }
 
     > li {
