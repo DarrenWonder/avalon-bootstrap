@@ -1,0 +1,50 @@
+<h3>短信验证码登录</h3>
+<div class="form-primary">
+  <div class="form-group">
+    <label for="">手机号码</label>
+    <input type="text" class="form-control" placeholder="请输入中国大陆的11位手机号" ms-duplex="@phone">
+  </div>
+  <div class="form-group">
+    <label for="">随机码</label>
+    <input type="text" class="form-control" placeholder="请输入右侧的随机码">
+    <div class="control-right">
+      <span class="captcha-btn" ms-on-click="@change">换一张</span>
+      <div class="captcha">
+        <img src="http://dev.whaletrip.com/index.php?m=www&c=index&a=captcha" alt="">
+      </div>
+    </div>
+  </div>
+  <div class="form-group">
+    <label for="">短信验证码</label>
+    <input type="text" class="form-control" placeholder="请输入手机短信验证码">
+    <div class="control-right">
+      <a href="" class="btn btn-reverse disabled" >点击获取</a>
+    </div>
+  </div>
+  <div class="form-group">
+    <label class="checkbox-group">
+      <input type="checkbox" class="checkbox">
+      <span class="iconfont checkicon"></span>
+      <span>2个月内自动登录</span>
+    </label>
+  </div>
+  <div class="form-action">
+    <a href="" class="btn btn-reverse">确定</a>
+    <p class="help-block"><a class="pull-right">使用密码登录</a></p>
+    <div class="other_login_type sns-login-container">
+      <fieldset class="oth_type_tit">
+        <legend class="oth_type_txt">其他方式登录</legend>
+      </fieldset>
+      <div class="oth_type_links">
+        <a href="" class="oth_type_link">
+          <p class="sns-logo"><span class="iconfont icon-weixin"></span></p>
+          <span>微信登录</span>
+        </a>
+        <a href="" class="oth_type_link">
+          <p class="sns-logo"><span class="iconfont icon-zhuce"></span></p>
+          <span>注册</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
